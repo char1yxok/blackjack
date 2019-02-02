@@ -73,6 +73,11 @@ namespace blackjack
                 MessageBox.Show("Bust. You Lose.");
                 HitButton.Enabled = false;
                 StandButton.Enabled = false;
+
+                PlayerLabel.ForeColor = Color.DeepSkyBlue;
+                PlayerLabel.Text = ("Lose");
+                CroupierLabel.ForeColor = Color.LightCoral;
+                CroupierLabel.Text = ("Win");
             }
         }
 
@@ -128,31 +133,63 @@ namespace blackjack
                 if(Boardnum.croupiersum > 21)
                 {
                     MessageBox.Show("You Win. (Croupier Bust)");
+
+                    CroupierLabel.ForeColor = Color.DeepSkyBlue;
+                    CroupierLabel.Text = ("Lose");
+                    PlayerLabel.ForeColor = Color.LightCoral;
+                    PlayerLabel.Text = ("Win");
+
                 }
                 //Player > Croupier
                 else if (21 - Boardnum.playersum < 21 - Boardnum.croupiersum)
                 {
                     MessageBox.Show("You Win.");
+
+                    CroupierLabel.ForeColor = Color.DeepSkyBlue;
+                    CroupierLabel.Text = ("Lose");
+                    PlayerLabel.ForeColor = Color.LightCoral;
+                    PlayerLabel.Text = ("Win");
                 }
                 //Player < Croupier
                 else if (21 - Boardnum.playersum > 21 - Boardnum.croupiersum)
                 {
                     MessageBox.Show("You Lose.");
+
+
+                    PlayerLabel.ForeColor = Color.DeepSkyBlue;
+                    PlayerLabel.Text = ("Lose");
+                    CroupierLabel.ForeColor = Color.LightCoral;
+                    CroupierLabel.Text = ("Win");
                 }
                 //Player = Croupier
                 else if (Boardnum.playersum == Boardnum.croupiersum)
                 {
                     MessageBox.Show("Draw");
+
+                    PlayerLabel.ForeColor = Color.MediumSeaGreen;
+                    PlayerLabel.Text = ("Draw");
+                    CroupierLabel.ForeColor = Color.MediumSeaGreen;
+                    CroupierLabel.Text = ("Draw");
                 }
             }
             //Player's sum is bust.
             else if(Boardnum.croupiersum > 21)
             {
                 MessageBox.Show("You Lose. (Each Bust)");
+
+                PlayerLabel.ForeColor = Color.DeepSkyBlue;
+                PlayerLabel.Text = ("Lose");
+                CroupierLabel.ForeColor = Color.LightCoral;
+                CroupierLabel.Text = ("Win");
             }
             else
             {
                 MessageBox.Show("You Lose.");
+
+                PlayerLabel.ForeColor = Color.DeepSkyBlue;
+                PlayerLabel.Text = ("Lose");
+                CroupierLabel.ForeColor = Color.LightCoral;
+                CroupierLabel.Text = ("Win");
             }
 
         }

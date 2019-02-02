@@ -38,6 +38,8 @@
             this.PlayerName = new System.Windows.Forms.Label();
             this.PlayerResult = new System.Windows.Forms.Label();
             this.CroupierResult = new System.Windows.Forms.Label();
+            this.CroupierLabel = new System.Windows.Forms.Label();
+            this.PlayerLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CroupierCard1
@@ -152,11 +154,33 @@
             this.CroupierResult.TabIndex = 10;
             this.CroupierResult.Text = "0";
             // 
+            // CroupierLabel
+            // 
+            this.CroupierLabel.AutoSize = true;
+            this.CroupierLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.CroupierLabel.Font = new System.Drawing.Font("HGｺﾞｼｯｸM", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.CroupierLabel.Location = new System.Drawing.Point(110, 98);
+            this.CroupierLabel.Name = "CroupierLabel";
+            this.CroupierLabel.Size = new System.Drawing.Size(0, 24);
+            this.CroupierLabel.TabIndex = 11;
+            // 
+            // PlayerLabel
+            // 
+            this.PlayerLabel.AutoSize = true;
+            this.PlayerLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.PlayerLabel.Font = new System.Drawing.Font("HGｺﾞｼｯｸM", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.PlayerLabel.Location = new System.Drawing.Point(110, 219);
+            this.PlayerLabel.Name = "PlayerLabel";
+            this.PlayerLabel.Size = new System.Drawing.Size(0, 24);
+            this.PlayerLabel.TabIndex = 12;
+            // 
             // GameBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 379);
+            this.Controls.Add(this.PlayerLabel);
+            this.Controls.Add(this.CroupierLabel);
             this.Controls.Add(this.CroupierResult);
             this.Controls.Add(this.PlayerResult);
             this.Controls.Add(this.PlayerName);
@@ -188,6 +212,8 @@
         private System.Windows.Forms.Label PlayerName;
         private System.Windows.Forms.Label PlayerResult;
         private System.Windows.Forms.Label CroupierResult;
+        private System.Windows.Forms.Label CroupierLabel;
+        private System.Windows.Forms.Label PlayerLabel;
     }
 }
 
